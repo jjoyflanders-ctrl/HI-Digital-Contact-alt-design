@@ -1,28 +1,28 @@
-# HI | Connect (Alt Design)
+# HI | Connect (v2) — CSV-driven Digital Business Card
 
-This repo is a **drop-in** digital business card that matches the provided mockups (desktop + mobile) and pulls employees from `employees.csv`.
+## What this is
+A fresh-start build that:
+- Loads employees from `employees.csv`
+- Desktop: search + open, Download Contact (.vcf), Share (native share when possible + QR modal fallback)
+- Mobile: QR code in the circle, green bar (call/email/website), bottom transparent bar (Share / Employees / Add)
 
-## How it works
-- Employees live in `employees.csv` (add rows, keep the headers).
-- Load a specific employee with `?u=employee-slug`
-  - Example: `.../pages/connect-V2?u=jessica-flanders`
+## The Shopify URL the QR uses
+`https://highlightindustries.net/pages/connect-v2`
 
-## IMPORTANT: Shopify URL for sharing + QR
-This build **always** generates QR/share links using the Shopify page URL so customers don’t see GitHub.
+## Add employee photos
+In `employees.csv`, set the `photo` column to a filename inside `/assets`, e.g.:
+`jessica.jpg`
 
-Update this constant in `app.js` if your Shopify page changes:
-```js
-const SHOPIFY_BASE_URL = "https://www.highlightindustries.net/pages/connect-V2";
-```
+If empty or missing, it falls back to `assets/building.jpg`.
 
-## Files
-- `index.html`
-- `styles.css`
-- `app.js`
-- `employees.csv`
-- `assets/building.jpg` (default)
-- `assets/jessica-flanders.png` (employee photo)
+## Deploy
+### GitHub Pages
+Upload these files to a repo root and enable Pages. The card should work at:
+`https://YOURNAME.github.io/YOURREPO/`
 
-## Shopify
-Embed your GitHub Pages URL using an iframe on the Shopify page, just like your current setup.
+### Shopify (clients only see Shopify URL)
+Embed your GitHub Pages URL in Shopify using an iframe (like your previous working setup).
 
+## Notes
+- Share uses the browser's Web Share API when available (AirDrop/text/email).
+- QR images come from QuickChart. If you ever want fully-offline QR generation, tell me and I’ll swap in an embedded QR library.

@@ -23,6 +23,7 @@ button{font-family:inherit}
   user-select:none; -webkit-user-drag:none;
 }
 
+/* Desktop photo circle overlay (tune if needed) */
 .desk-photoOverlay{
   position:absolute;
   left: 8.5%;
@@ -34,12 +35,12 @@ button{font-family:inherit}
 }
 .desk-photoOverlay img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* Smaller employee data (desktop) */
+/* Desktop text sizes (smaller than the huge version) */
 .desk-name{
   position:absolute;
   left: 52%;
   top: 24%;
-  font-size: clamp(26px, 3.8vw, 64px);
+  font-size: clamp(28px, 4.2vw, 68px);
   font-weight:700;
   line-height:.95;
 }
@@ -47,33 +48,33 @@ button{font-family:inherit}
   position:absolute;
   left: 52%;
   top: 33%;
-  font-size: clamp(14px, 1.6vw, 30px);
+  font-size: clamp(16px, 1.8vw, 34px);
   font-weight:500;
   color:var(--green);
 }
 .desk-line{
   position:absolute;
   left: 52%;
-  font-size: clamp(13px, 1.15vw, 22px);
+  font-size: clamp(14px, 1.3vw, 26px);
   color: rgba(255,255,255,.62);
 }
-.desk-line--phone{ top: 46%; }
-.desk-line--email{ top: 56.5%; }
-.desk-line--web{ top: 67%; max-width: 42%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-
-.hot{
-  position:absolute;
-  background:transparent;
-  border:none;
-  padding:0;
-  cursor:pointer;
+.desk-line--phone{ top: 48%; }
+.desk-line--email{ top: 60%; }
+.desk-line--web{
+  top: 72%;
+  max-width: 42%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 
-/* Click zones moved UP a bit */
+/* Hot zones (moved up slightly so the click isn't only on the bottom edge) */
+.hot{position:absolute;background:transparent;border:none;padding:0;cursor:pointer}
 .hot--desk-search{ right: 2.2%; top: 4.4%; width: 4.2%; height: 8.6%; border-radius:999px; }
-.hot--desk-vcard{ left: 57%; bottom: 12.5%; width: 20%; height: 10%; border-radius:999px; }
-.hot--desk-share{ left: 79%; bottom: 12.5%; width: 20%; height: 10%; border-radius:999px; }
+.hot--desk-vcard{ left: 57%; bottom: 12%; width: 20%; height: 10%; border-radius:999px; }
+.hot--desk-share{ left: 79%; bottom: 12%; width: 20%; height: 10%; border-radius:999px; }
 
+/* Mobile QR circle overlay */
 .mobi-qrOverlay{
   position:absolute;
   left: 7%;
@@ -87,27 +88,29 @@ button{font-family:inherit}
 }
 .mobi-qrOverlay img{width:90%;height:90%;object-fit:contain}
 
+/* Mobile text (tune if needed) */
 .mobi-name{
   position:absolute;
   left: 42%;
   top: 43%;
-  font-size: clamp(22px, 5.8vw, 40px);
+  font-size: clamp(20px, 5.4vw, 36px);
   font-weight:700;
 }
 .mobi-title{
   position:absolute;
   left: 42%;
   top: 49%;
-  font-size: clamp(14px, 3.8vw, 26px);
+  font-size: clamp(13px, 3.6vw, 24px);
   font-weight:500;
   color:var(--green);
 }
 
+/* Mobile icon hot zones (may need micro-nudges depending on the SVG) */
 .hot--mobi-call{ left: 54%; top: 35.5%; width: 10%; height: 5.2%; border-radius:999px; }
 .hot--mobi-email{ left: 67%; top: 35.5%; width: 10%; height: 5.2%; border-radius:999px; }
 .hot--mobi-web{ left: 80%; top: 35.5%; width: 10%; height: 5.2%; border-radius:999px; }
 
-/* Float bar + icons */
+/* Floating bottom bar */
 .ico{
   display:inline-block;width:24px;height:24px;background:currentColor;
   -webkit-mask:var(--mask) no-repeat center/contain;

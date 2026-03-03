@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Highlight Digital Contact</title>
+<link href="./manifest.webmanifest" rel="manifest"/>
+<link href="./assets/icon-192.png" rel="icon"/>
+<link href="./assets/icon-192.png" rel="apple-touch-icon"/>
+<meta content="#3F845B" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="./styles.css?v=13" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- DESKTOP LAYOUT -->
+<header aria-label="Header (desktop)" class="desk-header" id="deskHeader">
+<div class="desk-topbar">
+<div class="search-wrap">
+<label class="sr-only" for="employeeSearch">Find an employee</label>
+<input autocomplete="off" id="employeeSearch" placeholder="Search employees…" type="search"/>
+<div class="search-actions">
+<button class="btn btn-ghost" id="openBtn" type="button">Open</button>
+<button class="btn btn-ghost" id="clearBtn" title="Clear" type="button">Clear</button>
+</div>
+</div>
+</div>
+</header>
+<main class="page" id="main">
+<section aria-label="Digital business card (desktop)" class="desk-card" id="deskCard"><div class="desk-photo">
+<div class="photo-ring">
+<img alt="" id="photoDesk"/>
+</div>
+</div><div class="desk-info">
+<h1 class="name" id="nameDesk">—</h1>
+<div class="title" id="titleDesk">—</div>
+<div class="info">
+<a class="info-row" href="#" id="phoneLinkDesk">
+<span aria-hidden="true" class="icon-bubble">
+<svg viewbox="0 0 24 24"><path d="M6.6 10.8c1.3 2.3 3.2 4.2 5.5 5.5l1.8-1.8c.4-.4 1-.5 1.5-.3 1 .4 2 .6 3.1.6.6 0 1 .4 1 1v3.1c0 .6-.4 1-1 1C10 21.6 2.4 14 2.4 4.9c0-.6.4-1 1-1h3.1c.6 0 1 .4 1 1 0 1.1.2 2.1.6 3.1.2.5.1 1.1-.3 1.5l-1.8 1.8z"></path></svg>
+</span>
+<span id="phoneDesk">—</span>
+</a>
+<a class="info-row" href="#" id="emailLinkDesk">
+<span aria-hidden="true" class="icon-bubble">
+<svg viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+</span>
+<span id="emailDesk">—</span>
+</a>
+<a class="info-row" href="#" id="webLinkDesk" rel="noopener" target="_blank">
+<span aria-hidden="true" class="icon-bubble">
+<svg viewbox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.9 9h-3.1a15.5 15.5 0 00-1.2-5 8 8 0 014.3 5zM12 4.1c.9 1.2 1.7 3.2 2.1 6H9.9c.4-2.8 1.2-4.8 2.1-6zM4.1 13h3.1c.2 1.8.7 3.6 1.2 5A8 8 0 014.1 13zm3.1-2H4.1a8 8 0 014.3-5 15.5 15.5 0 00-1.2 5zM12 19.9c-.9-1.2-1.7-3.2-2.1-6h4.2c-.4 2.8-1.2 4.8-2.1 6zm4.5-1.9c.6-1.4 1-3.2 1.2-5h3.1a8 8 0 01-4.3 5zM8.3 13h7.4c-.2 1.8-.6 3.6-1.2 5H9.5c-.6-1.4-1-3.2-1.2-5zm0-2c.2-1.8.6-3.6 1.2-5h5c.6 1.4 1 3.2 1.2 5H8.3z"></path></svg>
+</span>
+<span id="webDesk">—</span>
+</a>
+</div>
+<div class="desk-bar">
+<button class="btn btn-pill-black" id="saveBtnDesk" type="button">Save to Contacts</button>
+<button class="btn btn-pill-black" id="sendBtnDesk" type="button">Send to Phone</button>
+</div>
+</div></section>
+<!-- MOBILE LAYOUT (forced via ?view=mobile) -->
+<section aria-label="Digital business card (mobile)" class="mob-shell" id="mobShell">
+<div class="mob-hero">
+<img alt="" class="mob-hero-img" id="photoMob"/>
+</div>
+<div class="mob-head">
+<div class="mob-qr-circle">
+<img alt="QR code" class="qr-img" id="qrMob"/>
+</div>
+<div class="mob-head-text">
+<h1 class="mob-name" id="nameMob">—</h1>
+<div class="mob-title" id="titleMob">—</div>
+</div>
+<div class="mob-quick">
+<a aria-label="Call" class="mob-quick-btn" href="#" id="phoneQuickMob">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.6 10.8c1.3 2.3 3.2 4.2 5.5 5.5l1.8-1.8c.4-.4 1-.5 1.5-.3 1 .4 2 .6 3.1.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.1.2 2.1.6 3.1.2.5.1 1.1-.3 1.5l-1.7 1.7Z" fill="currentColor"></path></svg>
+</a>
+<a aria-label="Email" class="mob-quick-btn" href="#" id="emailQuickMob">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z" fill="currentColor"></path></svg>
+</a>
+<a aria-label="Website" class="mob-quick-btn" href="#" id="webQuickMob" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm7.9 9h-3.2a15.5 15.5 0 0 0-1.4-6 8.1 8.1 0 0 1 4.6 6ZM12 4c.9 1.3 1.9 3.4 2.4 7H9.6C10.1 7.4 11.1 5.3 12 4ZM4.1 13h3.2a15.5 15.5 0 0 0 1.4 6 8.1 8.1 0 0 1-4.6-6Zm3.2-2H4.1a8.1 8.1 0 0 1 4.6-6 15.5 15.5 0 0 0-1.4 6Zm2.3 2h4.8c-.5 3.6-1.5 5.7-2.4 7-.9-1.3-1.9-3.4-2.4-7Zm5.7 8a15.5 15.5 0 0 0 1.4-6h3.2a8.1 8.1 0 0 1-4.6 6Zm1.4-8a15.8 15.8 0 0 0 .1-2 15.8 15.8 0 0 0-.1-2h3.2a8 8 0 0 1 0 4Z" fill="currentColor"></path></svg>
+</a>
+</div>
+</div>
+<div class="mob-body">
+<div class="mob-info">
+<div class="mob-block">
+<div class="mob-label">Call</div>
+<a class="mob-value" href="#" id="phoneLinkMob"><span id="phoneMob">—</span></a>
+</div>
+<div class="mob-block">
+<div class="mob-label">Email</div>
+<a class="mob-value" href="#" id="emailLinkMob"><span id="emailMob">—</span></a>
+</div>
+<div class="mob-block">
+<div class="mob-label">Website</div>
+<a class="mob-value" href="#" id="webLinkMob" rel="noopener" target="_blank"><span id="webMob">—</span></a>
+</div>
+</div>
+<div aria-label="Actions" class="mob-actionbar">
+<button aria-label="Share" class="mob-icon-btn" id="shareBtnMob" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4.01 4a1 1 0 0 1-1.38 0l-4.01-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Z" fill="currentColor"></path>
+<path d="M5 14a1 1 0 0 1 1 1v3h12v-3a1 1 0 1 1 2 0v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a1 1 0 0 1 1-1Z" fill="currentColor"></path>
+</svg>
+</button>
+<button aria-label="Find employees" class="mob-icon-btn" id="findBtnMob" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M10.5 3a7.5 7.5 0 1 0 4.64 13.39l4.23 4.22a1 1 0 0 0 1.41-1.41l-4.22-4.23A7.5 7.5 0 0 0 10.5 3Zm0 2a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11Z" fill="currentColor"></path>
+</svg>
+</button>
+<button aria-label="Add to Contacts" class="mob-pill-btn" id="saveBtnMob" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M9 12a4 4 0 1 0-4-4a4 4 0 0 0 4 4Zm0-6a2 2 0 1 1-2 2a2 2 0 0 1 2-2Zm0 8c-3.33 0-6 1.34-6 4v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1c0-2.66-2.67-4-6-4Zm-4 5c.2-1.38 2.1-3 4-3s3.8 1.62 4 3H5Zm14-8v-2a1 1 0 0 0-2 0V11h-2a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0v-2h2a1 1 0 0 0 0-2h-2Z" fill="currentColor"></path>
+</svg>
+<span>Add to Contacts</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- SEND TO PHONE MODAL (desktop) -->
+<dialog class="modal" id="mobShareModal">
+<form class="modal-inner" method="dialog">
+<div class="modal-head">
+<div class="modal-kicker">SHARE</div>
+<div class="modal-title">Share this contact</div>
+<button aria-label="Close" class="modal-x" value="cancel">✕</button>
+</div>
+<div class="share-panel share-panel--single">
+<button class="btn btn-light" id="mobNativeShareBtn" type="button">Share (AirDrop / Messages / Mail)</button>
+<button class="btn btn-light" id="mobCopyLinkBtn" type="button">Copy Link</button>
+<button class="btn btn-light" id="mobTextLinkBtn" type="button">Text Link</button>
+<button class="btn btn-light" id="mobEmailLinkBtn" type="button">Email Link</button>
+</div>
+</form>
+</dialog><dialog class="modal" id="sendModal">
+<form class="modal-inner" method="dialog">
+<div class="modal-head">
+<div class="modal-kicker">SEND TO PHONE</div>
+<div class="modal-title">Share this contact</div>
+<button aria-label="Close" class="modal-x" value="cancel">✕</button>
+</div>
+<div class="modal-grid">
+<div class="qr-panel">
+<div class="qr-label">Scan to open on your phone</div>
+<div class="qr-box">
+<img alt="QR code" class="qr-img" id="qrDesk"/>
+</div>
+</div>
+<div class="share-panel">
+<button class="btn btn-light" id="nativeShareBtn" type="button">Share (AirDrop / Messages / Mail)</button>
+<button class="btn btn-light" id="copyLinkBtn" type="button">Copy Link</button>
+<button class="btn btn-light" id="textLinkBtn" type="button">Text Link</button>
+<button class="btn btn-light" id="emailLinkBtn" type="button">Email Link</button>
+</div>
+</div>
+</form>
+</dialog>
+<!-- FIND MODAL (mobile) -->
+<dialog class="modal" id="findModal">
+<form class="modal-inner" method="dialog">
+<div class="modal-head">
+<div class="modal-kicker">FIND</div>
+<div class="modal-title">Find an employee</div>
+<button aria-label="Close" class="modal-x" value="cancel">✕</button>
+</div>
+<div class="find-body">
+<label class="sr-only" for="employeeSearchMob">Search employees</label>
+<input autocomplete="off" id="employeeSearchMob" placeholder="Search employees…" type="search"/>
+<div class="find-results" id="findResults"></div>
+</div>
+</form>
+</dialog>
+<script defer="" src="./app.js?v=13"></script>
+</body>
+</html>
